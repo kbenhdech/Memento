@@ -1,8 +1,8 @@
-Git
+﻿Git
 ===
 
 Fusionner deux commit :
-* `git reset --soft HEAD~1`
+* `git reset --soft HEAD~1` 
 * `git commit -a --amend`
 
 
