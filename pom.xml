@@ -1,14 +1,22 @@
-<project>
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+      <groupId>fr.kbenhdech</groupId>
+      <artifactId>kbenhdech-parent</artifactId>
+      <version>1-SNAPSHOT</version>
+  </parent>
+
+
   <artifactId>fr.kbenhdech.memento</artifactId>
   <groupId>memento.vidal</groupId>
   <version>0.1-SNAPSHOT</version>
+
   <build>
     <plugins>
 	
       <plugin>
         <artifactId>maven-antrun-plugin</artifactId>
-        <version>1.6</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -47,9 +55,8 @@
 	  <plugin>
             <groupId>org.mortbay.jetty</groupId>
             <artifactId>jetty-maven-plugin</artifactId>
-            <version>7.2.2.v20101205</version>
             <configuration>
-			   <webAppSourceDirectory>${basedir}/target/webapps/memento-vidal/</webAppSourceDirectory>
+	       <webAppSourceDirectory>${basedir}/target/webapps/memento-vidal/</webAppSourceDirectory>
                <scanIntervalSeconds>10</scanIntervalSeconds>
                <connectors>
                   <connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
