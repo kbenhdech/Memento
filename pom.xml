@@ -1,0 +1,65 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>fr.kbenhdech.memento</artifactId>
+  <groupId>memento.technique</groupId>
+  <version>0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+	
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.6</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <configuration>
+              <tasks>
+		<mkdir dir="target"/>
+		<mkdir dir="target/webapps"/>
+		<mkdir dir="target/webapps/memento-vidal"/>
+                <exec
+                  dir="${basedir}"
+                  executable="pandoc"
+                  failonerror="true">
+                  <arg line="-s -A 'src/footer.html' -B 'src/header.html' 'src/git.md' -o 'target/webapps/memento-vidal/git.html'" />
+                </exec>
+		<exec
+                  dir="${basedir}"
+                  executable="pandoc"
+                  failonerror="true">
+		  <arg line="-s -A src/footer.html -B src/header.html src/linux.md -o target/webapps/memento-vidal/linux.html" />
+                </exec>
+		<exec
+                  dir="${basedir}"
+                  executable="pandoc"
+                  failonerror="true">
+		  <arg line="-s -A src/footer.html -B src/header.html src/index.md -o target/webapps/memento-vidal/index.html" />
+                </exec>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+	  
+	  <plugin>
+            <groupId>org.mortbay.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>7.2.2.v20101205</version>
+            <configuration>
+			   <webAppSourceDirectory>${basedir}/target/webapps/memento-vidal/</webAppSourceDirectory>
+               <scanIntervalSeconds>10</scanIntervalSeconds>
+               <connectors>
+                  <connector implementation="org.eclipse.jetty.server.bio.SocketConnector">
+                     <port>8101</port>
+                     <maxIdleTime>60000</maxIdleTime>
+                  </connector>
+               </connectors>
+            </configuration>
+      </plugin>
+		 
+    </plugins>
+  </build>
+</project>

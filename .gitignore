@@ -1,14 +1,4 @@
-*.log
-*/*.log
-
-*.pdf
-*/*.pdf
-
-*.toc
-*/*.toc
-
-*.aux
-*/*.aux
+target/**
 
 
 

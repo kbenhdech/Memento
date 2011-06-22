@@ -1,0 +1,25 @@
+Installation
+============
+
+Linux : `sudo apt-get install pandoc`
+Windows : Télécharger l'installeur à ce [lien](http://johnmacfarlane.net/pandoc/installing.html)
+
+Commandes
+=========
+
+Créer un fichier html avec un header et un footer : `pandoc -s -A footer.html -B header.html file.md -o file.html`
+
+Lancer le projet
+================
+
+Taper la commande : `mvn clean install jetty:run`
+
+Le site est ensuite accessible à l'adresse : `http://localhost:8101/`
+
+Liens intéressants
+==================
+
+[Pandoc](http://johnmacfarlane.net/pandoc/)
+
+[Daring Fireball](http://daringfireball.net/projects/markdown/)
+
