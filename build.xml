@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="php" default="help">
+
+	<target name="create-site">
+		<antcall target="create-html"><param name="name-file" value="git"/></antcall> 
+		<antcall target="create-html"><param name="name-file" value="linux"/></antcall>
+		<antcall target="create-html"><param name="name-file" value="index"/></antcall> 
+                <antcall target="create-html"><param name="name-file" value="other"/></antcall> 
+
+		<mkdir dir="target"/>
+		<mkdir dir="target/webapps"/>
+		<mkdir dir="target/webapps/memento-vidal"/>
+
+		<copy file="src/main.css" todir="target/webapps/memento-vidal/css"/>
+	</target>
+
+	<target name="create-html">
+                <echo>Create ${name-file}.html file</echo>
+		<exec
+			dir="${basedir}"
+			executable="pandoc"
+			failonerror="true">
+			<arg line="-s -c css/main.css -A 'src/footer.html' -B 'src/header.html' 'src/${name-file}.md' -o 'target/webapps/memento-vidal/${name-file}.html'" />
+		</exec>
+	</target>
+
+</project>
