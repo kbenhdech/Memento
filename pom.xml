@@ -43,6 +43,12 @@
                   failonerror="true">
 		  <arg line="-s -A src/footer.html -B src/header.html src/index.md -o target/webapps/memento-vidal/index.html" />
                 </exec>
+		<exec
+                  dir="${basedir}"
+                  executable="pandoc"
+                  failonerror="true">
+		  <arg line="-s -A src/footer.html -B src/header.html src/marches.md -o target/webapps/memento-vidal/marches.html" />
+                </exec>
               </tasks>
             </configuration>
             <goals>
