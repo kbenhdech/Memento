@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="php" default="help">
+<project name="memento-technique" default="create-site">
 
 	<target name="create-site">
 		<antcall target="create-html"><param name="name-file" value="git"/></antcall> 
