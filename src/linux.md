@@ -19,8 +19,9 @@ Dézipper un fichier avec l'extension .tar : `tar xf file.tar`
 Dézipper un fichier avec l'extension .gz : `gzip -d file.gz`
 
 Rechercher dans les fichiers du répertoire courant (récursivement) : 
-* ack-grep word
-* find ./ -print0 | xargs --null grep word
+
+* `ack-grep word`
+* `find ./ -print0 | xargs --null grep word`
 
 Sed : http://www.system-linux.eu/index.php?post/2008/12/21/La-commande-Sed
 
