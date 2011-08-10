@@ -6,6 +6,7 @@
 		<antcall target="create-html"><param name="name-file" value="linux"/></antcall>
 		<antcall target="create-html"><param name="name-file" value="index"/></antcall> 
                 <antcall target="create-html"><param name="name-file" value="other"/></antcall> 
+                <antcall target="create-html"><param name="name-file" value="mysql"/></antcall> 
 
 		<mkdir dir="target"/>
 		<mkdir dir="target/webapps"/>

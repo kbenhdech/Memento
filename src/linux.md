@@ -32,6 +32,8 @@ Fichiers
 
 * .bashrc
 
+Connaître la taille d'un répertoire : `du -sh repertoire`
+
 
 
 Liens intéressants
