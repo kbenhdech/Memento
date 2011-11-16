@@ -41,19 +41,19 @@ Voir les dernières lignes d'un fichier : `tail -f file`
 
 Redemarrer : `reboot`
 
-TODO : `lshw`
+Récupérer les informations hardware de sa machine : `lshw`
 
-TODO : `netstat -anpe`
+Afficher des informations sur les connexions réseau : `netstat -anpe`
 
-TODO : `lsof`
+Lister les fichiers actuellement ouverts sur le système : `lsof`
 
-TODO : `chrootkit`
+Détecter si le système UNIX n'est pas compromis par un rootkit. : `chkrootkit`
 
-TODO : `rkhunter`
+Détecter si le système UNIX n'est pas compromis par des rootkits, portes dérobées et exploits. : `rkhunter --check`
 
-TODO : `rsync -vart`
+Synchroniser deux répertoires : `rsync -vart origine destination`
 
-TODO : `mtop`
+Avoir des informations sur le trafic réseau en temps réel : `ntop`
 
 
 
@@ -226,7 +226,6 @@ Redemarrez :
 
 
 
-
 Utilisateurs
 ------------
 
@@ -240,6 +239,18 @@ vi /etc/passwd
 
 
 
+Screen
+------
+
+Voir la liste des fenêtres ouvertes : `ctrl-a +w`
+
+Créer une fenêtre : `ctrl-a +c`
+
+Aller à la fenêtre [numéro de fenetre] : `ctrl-a +[numéro de fenetre]`
+
+Stopper screen : `ctrl-a +d`
+
+Lancer screen avec la dernière session : `screen -r`
 
 
 Autres
@@ -260,7 +271,6 @@ TODO
 
 etc/shells
 
-screen
 kornshell
 zsh complétion amélioré
 
