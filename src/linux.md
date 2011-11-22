@@ -55,8 +55,11 @@ Synchroniser deux répertoires : `rsync -vart origine destination`
 
 Avoir des informations sur le trafic réseau en temps réel : `ntop`
 
+Rechercher un mot récursivement dans des fichiers : `ack-grep mot`
 
+Faire une mise à jour : `sudo apt-get upgrade -f --fix-missing`
 
+Remplacer une chaine de caractère (ici "vidal") par une autre chaine de caractère (ici "ubm") dans des fichiers (portant ici l'extension .xml), récursivement : `find . -name "*.xml" -type f -exec sed -i "s/vidal/ubm/g" {} \;`
 
 
 Fichiers
