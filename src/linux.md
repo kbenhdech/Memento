@@ -13,7 +13,7 @@ Copier un fichier de/sur une autre machine : `scp root@192.168.0.0:/home/root/fr
 Télécharger un fichier : `wget http://www.site.com/file.txt`
 
 Créer un lien symbolique : `ln -s file symlink`
-+
+
 Dézipper un fichier avec l'extension .tar.gz : `tar xvzf file.tar.gz`
 
 Dézipper un fichier avec l'extension .tar : `tar xf file.tar`
